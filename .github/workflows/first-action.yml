@@ -1,0 +1,18 @@
+#define work flow name
+name: First Workflow
+
+# when this work flow should be executed
+#define the events that trigger this workflow to run
+# workflow_dispatch = we can manually trigger this workflow (event that wait for user to start this workflow)
+on: workflow_dispatch
+
+#work that should be done
+jobs:
+  first-job: 
+    #define runner (execution environment)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print greeting
+        run: echo "Hello World!"
+      - name: Print goodbye
+        run: echo "Done - bye!"
